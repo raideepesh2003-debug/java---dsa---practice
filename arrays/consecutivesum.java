@@ -9,12 +9,19 @@ public class consecutivesum {
         for(int i =0; i<n; i++){
             arr[i] = sc.nextInt();
         }
-        int count =0;
+       // int count =0;
+       boolean target = false;
         for(int i =0; i<n-1; i++){
            if( arr[i] + arr[i+1] == k){
-            count++;
+            target = true;
+            break;
         }
     }
-        System.out.println(count);
+    if(target){
+        System.out.println("true");
+    }else{
+        System.out.println("False");
+    }
+       
     }
 }

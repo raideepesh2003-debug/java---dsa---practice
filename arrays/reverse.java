@@ -8,8 +8,17 @@ public class reverse {
     for(int i =0; i<n; i++){
         arr[i] = sc.nextInt();
     }
-    for(int i = n-1; i>=0; i--){
-        System.out.print(arr[i] + " ");
+    int i =0;
+    int j =arr.length-1;
+    while(i<j){
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+        i++;
+        j--;
+    }
+    for(int k =0; k<n; k++){
+        System.out.print(arr[k] + " ");
     }
    } 
 }
